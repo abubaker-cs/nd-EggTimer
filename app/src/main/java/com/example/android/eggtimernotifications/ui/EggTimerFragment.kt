@@ -70,7 +70,6 @@ class EggTimerFragment : Fragment() {
                 channelId,
                 channelName,
 
-                // TODO: Step 2.4 change importance: Low
                 /**
                  * 1. High = Makes a Sound and appears in the heads-up notification
                  * 2. Default = Makes a Sound
@@ -81,6 +80,11 @@ class EggTimerFragment : Fragment() {
                  */
                 NotificationManager.IMPORTANCE_HIGH
             )
+
+                // Disable badges for this channel
+                .apply {
+                    setShowBadge(false)
+                }
 
             // Enables Lights
             notificationChannel.enableLights(true)
