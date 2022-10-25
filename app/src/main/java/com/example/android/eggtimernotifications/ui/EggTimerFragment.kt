@@ -50,7 +50,11 @@ class EggTimerFragment : Fragment() {
 
         // TODO: Step 1.7 call create channel
         createChannel(
+
+            // egg_channel
             getString(R.string.egg_notification_channel_id),
+
+            // Egg
             getString(R.string.egg_notification_channel_name)
         )
 
@@ -58,6 +62,7 @@ class EggTimerFragment : Fragment() {
     }
 
     private fun createChannel(channelId: String, channelName: String) {
+
         // TODO: Step 1.6 START create a channel
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
@@ -65,15 +70,23 @@ class EggTimerFragment : Fragment() {
                 channelId,
                 channelName,
 
-                // TODO: Step 2.4 change importance
+                // TODO: Step 2.4 change importance: Low
                 NotificationManager.IMPORTANCE_LOW
             )
 
+            // Enables Lights
             notificationChannel.enableLights(true)
+
+            // Red Light
             notificationChannel.lightColor = Color.RED
+
+            // Enable: Vibration
             notificationChannel.enableVibration(true)
+
+            // Description
             notificationChannel.description = "Time for breakfast"
 
+            // We are calling the system service
             val notificationManager = requireActivity().getSystemService(
                 NotificationManager::class.java
             )
