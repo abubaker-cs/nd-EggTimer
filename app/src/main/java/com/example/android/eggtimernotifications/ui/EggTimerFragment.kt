@@ -71,6 +71,14 @@ class EggTimerFragment : Fragment() {
                 channelName,
 
                 // TODO: Step 2.4 change importance: Low
+                /**
+                 * 1. High = Makes a Sound and appears in the heads-up notification
+                 * 2. Default = Makes a Sound
+                 * 3. Low = No Sound
+                 * 4. Min = No sound and does not appear in the status bar
+                 *
+                 * Reference: https://m3.material.io/design/platform-guidance/android-notifications.html#settings
+                 */
                 NotificationManager.IMPORTANCE_LOW
             )
 
