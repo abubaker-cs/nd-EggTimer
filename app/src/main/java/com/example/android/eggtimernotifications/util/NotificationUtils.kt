@@ -102,9 +102,8 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
             snoozePendingIntent
         )
 
-    // TODO: Step 2.3 add snooze action
-
-    // TODO: Step 2.5 set priority
+        // API Level <= 25 | Android 7.0
+        .setPriority(NotificationCompat.PRIORITY_HIGH)
 
     // Call notify
     notify(NOTIFICATION_ID, builder.build())

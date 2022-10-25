@@ -79,7 +79,7 @@ class EggTimerFragment : Fragment() {
                  *
                  * Reference: https://m3.material.io/design/platform-guidance/android-notifications.html#settings
                  */
-                NotificationManager.IMPORTANCE_LOW
+                NotificationManager.IMPORTANCE_HIGH
             )
 
             // Enables Lights
