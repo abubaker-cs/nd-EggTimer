@@ -48,14 +48,24 @@ class EggTimerFragment : Fragment() {
         binding.eggTimerViewModel = viewModel
         binding.lifecycleOwner = this.viewLifecycleOwner
 
-        // TODO: Step 1.7 call create channel
+        // Channel: Egg
         createChannel(
 
-            // egg_channel
+            // Chanel Name: egg_channel
             getString(R.string.egg_notification_channel_id),
 
-            // Egg
+            // Notification Channel Name: Egg
             getString(R.string.egg_notification_channel_name)
+        )
+
+        // Channel: FCM
+        createChannel(
+
+            // Chanel Name: fcm_default_channel
+            getString(R.string.breakfast_notification_channel_id),
+
+            // Notification Channel Name: Breakfast
+            getString(R.string.breakfast_notification_channel_name)
         )
 
         return binding.root
